@@ -20,5 +20,10 @@ def hello():
 def user(name):
 	return "<h1>Hello %s!</h1>" % name
 
+from flask import redirect
+@app.route("/163")
+def route163():
+	return redirect("http://www.163.com")
+
 if __name__ == "__main__":
     app.run(debug=True)
