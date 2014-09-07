@@ -10,7 +10,11 @@
 #-------------------------------------------------------------------------------
 
 from flask import Flask
+from flask.ext.script import Manager
+
 app = Flask(__name__)
+
+manager = Manager(app)
 
 @app.route("/")
 def hello():
@@ -26,4 +30,4 @@ def route163():
 	return redirect("http://www.163.com")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    manager.run()
