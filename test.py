@@ -9,7 +9,7 @@
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 
-from flask import Flask
+from flask import Flask, render_template
 from flask.ext.script import Manager
 
 app = Flask(__name__)
@@ -20,9 +20,17 @@ manager = Manager(app)
 def hello():
     return "Hello World!"
 
+@app.route("/index")
+def return_index():
+    return render_template("index.html")
+
 @app.route("/user/<name>")
 def user(name):
-	return "<h1>Hello %s!</h1>" % name
+	return render_template("user.html", name=name)
+
+
+
+
 
 from flask import redirect
 @app.route("/163")
