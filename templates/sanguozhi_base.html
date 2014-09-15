@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('.static', filename='toggle.js')}}"></script>
+{{ super() }}
+<div class="toolkits">
+    <a href="#" class="toolkit">↑回顶部</a>
+    <a href="#" class="toolkit" id="show_all_comment">显示全部注</a>
+    <a href="#" class="toolkit" id="hide_all_comment">关闭全部注</a>
+</div>
+{% endblock %}

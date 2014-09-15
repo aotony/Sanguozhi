@@ -31,14 +31,14 @@ def user(name):
 	return render_template("user.html", name=name)
 
 
+@app.route("/sanguozhi/")
+def return_sanguozhi_index():
+	return render_template("sanguozhi_index.html")
 
 @app.route("/sanguozhi/<file_name>")
-def return_sanguozhi(file_name):
+def return_sanguozhi_content(file_name):
 	if type(int(file_name)) == int :
 		return render_template("sanguozhi_" + file_name + ".html")
-	else :
-		if "css" in file_name :
-			return redirect(url_for("static", filename=file_name))
 
 
 @app.errorhandler(404)

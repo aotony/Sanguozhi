@@ -1,358 +1,76 @@
 @charset "utf-8";
 
 /* =============================================================================
-   HTML5 顯示定義
+   base
    ========================================================================== */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: auto;
+  -ms-text-size-adjust: auto;
+}
+
+body {
+  margin:0 0 10% 0;
+  font-family: "微軟正黑體","新細明體", "細明體","細明體-ExtB",Verdana, Arial, Helvetica, sans-serif;
+  font-size:100%;
+  color:#333;
+  letter-spacing:1px;
+  line-height:170%;
+}
 
 /* =============================================================================
-   基底
-   ========================================================================== */
-
-html { font-size: 100%; overflow-y: scroll; overflow-x:hidden; -webkit-text-size-adjust: auto; -ms-text-size-adjust: auto; }
-
-body { margin:0px 0px 60px 0px;
-	font-family: "微軟正黑體","新細明體", "細明體","細明體-ExtB",Verdana, Arial, Helvetica, sans-serif;
-	font-size:100%;
-	color:#333;
-	letter-spacing:1px;
-	line-height:170%;
-	}
-
-/* =============================================================================
-   連結
+   hyperlink
    ========================================================================== */
 
 a:link {
-	color: #4785CF;
-	text-decoration: none; 
+  color: #4785CF;
+  text-decoration: none; 
 }
 a:visited {
-	color: #4785CF;
-	text-decoration:none;
+  color: #4785CF;
+  text-decoration:none;
 }
 a:hover, a:active, a:focus {
-	text-decoration: none;
-	color: #FF0000;
+  text-decoration: none;
+  color: #FF0000;
 }
 
 a img { border: 0px;}
 
 /* =============================================================================
-   印刷樣式
+   print
    ========================================================================== */
 blockquote { margin: 1em 40px; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0; padding: 0; }
 
 /* =============================================================================
-   清單
+   list
    ========================================================================== */
 
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+ul, ol { margin: 1em 0; padding: 0 0 0 2%; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
+li {margin-top: 4px}
+
 /* =============================================================================
-   內嵌內容
+   embedded element
    ========================================================================== */
 
 img { border: 0; vertical-align: middle; }
 svg:not(:root) { overflow: hidden; }
 
-/* ==|== 主要樣式 =====================================================
-   作者: 
+/* ==|== main style =====================================================
+
    ========================================================================== */
-h2{
-	font-size: 125%;
-	color: #3853cf;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	padding-left: 3%;
-	padding-top: 10px;
-}
 
-h3{
-	font-size:120%;
-	color:#3853cf;
-	padding-left:3%;
-	}  
-	 
-h5 { font-size:100%;
-	margin-left:3%;
-	color: #3853CF;
-	}
-
-h6 { font-size:100%;
- 	margin-left:3%;
-	color: #3853CF;
-	margin-bottom:0;
-	}
-
-.top a{
-	color: #006699;
-	text-align:right;
-	padding-left:20px;
-	}
-
-.top a:hover, a:active, a:focus {
-	text-decoration: none;
-	color: #FF0000;
-}
-
-.Time{
-	margin:0;
-	padding-bottom:8px;
-	text-align:right;
-	font-size:75%;
-	color:#666;
-}
-	
-.search {
-	text-align:right;
-	font-size:90%;
-	}
-	
-.txt {
-	width:50%;
-	border:1px solid #CED6F9;
-	height:22px;
-	margin-right:5px;
-	margin-bottom:5px;
-	}
-	
-	/* ~~ 導覽清單樣式 (如果選擇使用 Spry 之類的預製飛出選單，則可移除) ~~ */
-.sidebar1 {
-	float:left;
-	margin:0px;
-	text-align:center;
-	}
-	
-.sidebar1 img{
-	width:90%;
-	padding-top:15px;
-	text-align:center;
-	max-width:110px;
-	}
-
-/* SpryMenuBarHorizontal.css - version 0.6 - Spry Pre-Release 1.6.1 */
-
-ul.MenuBarHorizontal
-{
-	float:right;
-	margin-top:11px;
-	padding:0px;
-	list-style-type: none;
-}
-ul.MenuBarActive
-{
-	z-index: 1000;
-}
-ul.MenuBarHorizontal ul.MenuBarSubmenuVisible
-{
-	left: auto;
-}
-ul.MenuBarHorizontal ul li
-{
-	width: 6.6em;
-	margin-left:-20px;
-	}
-
-ul.MenuBarHorizontal ul li a
-{
-	background:rgba(77,137,210,0.9);
-	color:#FFF;
-}
-
-ul.MenuBarHorizontal ul li a:hover
-{
-	background:rgba(77,137,210,1);
-	font-size:120%;
-	color: #FF0;
-}
-
-ul.MenuBarHorizontal ul ul
-{
-	position: absolute;
-	margin: -5% 0 0 95%;
-}
-
-ul.MenuBarHorizontal ul.MenuBarSubmenuVisible ul.MenuBarSubmenuVisible
-{
-	left: auto;
-	top: 0;
-}
-
-ul.MenuBarHorizontal a
-{
-	display: block;
-	cursor: pointer;
-	padding: 0.25em;
-	background:linear-gradient(center,#8DAAF5,#E6F0FF);
-	background:-moz-linear-gradient(center,#8DAAF5,#E6F0FF);
-	background:-webkit-linear-gradient(center,#8DAAF5,#E6F0FF);
-	color: #333;
-	text-decoration: none;
-}
-ul.MenuBarHorizontal a.MenuBarItemHover, ul.MenuBarHorizontal a.MenuBarItemSubmenuHover, ul.MenuBarHorizontal a.MenuBarSubmenuVisible
-{
-	background: rgba(168,192,255,0.8);
-	color: #FFF;
-}
-
-/* HACK FOR IE: to make sure the sub menus show above form controls, we underlay each submenu with an iframe */
-ul.MenuBarHorizontal iframe
-{
-	position: absolute;
-	z-index: 1010;
-}
-/* HACK FOR IE: to stabilize appearance of menu items; the slash in float is to keep IE 5.0 from parsing */
-@media screen, projection
-{
-	ul.MenuBarHorizontal li.MenuBarItemIE
-	{
-		display: inline;
-		f\loat: left;
-		background: #FFF;
-	}
-}
- /*******************************************************************************/
-
-.inde{
-	text-indent:-2.2em;
-	margin-left:2.2em;
-	}
-
-.block1{margin:0;padding:0 0 0 15%}
-.feature{margin-top:25px;text-align:justify;word-wrap:break-word;word-break:break-all;font-size:105%}
-.feature p{padding:10px 10px 5px 3%}
-.feature blockquote{margin:0;padding:0 0 0 10.5%}
-.feature img{border:0;vertical-align:middle}
-
-/*************story **********/
-
-.story{
-	margin-top:25px;
-	text-align:justify;
-	word-wrap:break-word;
-	word-break:break-all
-	}
-	
-.story p{
-	padding:10px 10px 5px 3%
-	}
-
-.story ul{margin:20px 0 0 1%}
-.story ul li p{margin:10px 0 10px -15px}
-
-
- /*******************************************************************************/
-.poem{
-	padding:15px 10px 0 25px;
-	font-family:"標楷體",Verdana,Arial,sans-serif;
-	font-size:110%;line-height:170%}
-	
-.poem p{margin-top:30px;margin-bottom:20px}
-.poem img{border:0;vertical-align:middle}
-.clearfloat{clear:both;height:0;font-size:1px;line-height:0}
-
-.style2{font-size:120%;color:red;padding:0 0 0 3%}
-.style3{color:#444;font-size:85%}
-.style4{color:#6972dc}
-.style5 table{display:block;width:90%;margin:0 auto;letter-spacing:0}
-.style5 td{padding:4px 4px 4px 10px;font-size:95%;border:1px solid #b9ccf9}
-.style5 img{border:0;vertical-align:middle}
-.style5 a:hover{text-decoration:none;color:#F00}
-.style6{font-size:105%;color:#8372e0;font-weight:600}
-.style7{font-size:85%;color:#069}
-.hidden_comment{display:none}
-.style8{color:#888}
-.style9{font-weight:600;color:#069;letter-spacing:2px;font-size:105%}
-.style10{font-size:90%;color:#666}
-.style10 p{margin:0;padding:5px}
-.style10 img{border:0;vertical-align:middle}
-.style10 table{display:block;width:100%;margin:0;letter-spacing:0}
-.style10 td{padding:5px;font-size:95%;border:#b9ccf9 1px solid}
-.style10 ul{margin:0;padding:0 3px 0 15px}
-.style10 li{margin:0;padding:5px 0 5px 0}
-.style11{color:#069}
-.style15{color:#3853cf;margin-top:30px;margin-bottom:10px}
-.style16{color:#3853cf;margin-left:35px}
-.style17{
-	color:#999;font-size:85%; 
-	display:inline;
-	float:right;
-	margin-right:25px;
-	}
-.style20 {text-decoration: underline;font-size:90%;color:#666;padding-left:50px;}
-
-.next1{
-	text-align:right;
-	margin:0 20px 25px 0;
-	padding:0px;
-	color:#666;
-}
-
-.toolkits {right: 0px; position: fixed; botton: 0px;}
+.toolkits {right: 0; top: 80%; position: fixed;}
 .toolkit {display: table; }
 
-
-/* 同時在螢幕讀取器和瀏覽器中隱藏: h5bp.com/u */
-.hidden { display: none !important; visibility: hidden; }
-
-/* 包含浮動: h5bp.com/q */ 
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-
-
-/* =============================================================================
-   表格
-   ========================================================================== */
-
-table { 
-	border-collapse: collapse; 
-	border-spacing: 0; 
-	width:95%; 
-	margin:10px auto;
-	}
-td { vertical-align: top; }
-
-.tablea td{
-	height:25px;
-	border: 1px solid #5F84C9;
-	padding:4px 7px;
-	font-size:100%;
-	}
-
-.tableb{
-	background-color: #DDE3FF;
-	border: 1px solid #FFFFFF;
-	font-size:95%;
-	}
-
-
-.tableb a:hover{
-	color: #FF0000;
-	text-decoration:none;
-	}
-	
-.tableb td{
-	height:25px;
-	border: 1px solid #FFFFFF;
-	padding:4px 7px;
-	}
-
-.wTable{
-	font-size:90%;
-	color:#666;
-	margin-bottom:10px;
-	width:100%;
-	margin:10px auto;}
-.wTable table{
-	display:block;
-	margin:0 auto;
-	table-layout:auto;
-	}
-.wTable td{padding:3px 3px 3px 10px;font-size:95%;border:#dae9fe 1px solid;vertical-align:top;word-break:break-all}
-.wTable td p{margin:0;padding:0}
+.comment{font-size:85%;color:#069}
+.hidden_comment{display:none}
+.highlight_name {font-size:160%}
